@@ -1,0 +1,35 @@
+{% extends "layout.html"%}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body%}
+
+        <br><br>
+        <h2>Result for your request are provided below.</h2>
+        <br><br>
+        <p>A new entry has been created in the database. Please use the id given below to connect account on ams.</p>
+        <br>
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>GroupType</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {% for rows in results %}
+                        <tr>
+                            <td>{{ rows.id }}</td>
+                            <td>{{ rows.name }}</td>
+                            <td>{{ rows.groupType }}</td>
+                        </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+        <br><br><br>
+        <img src='static/trix.jpg' width='10%'>
+
+{% endblock %}

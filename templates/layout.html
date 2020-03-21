@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %} {% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            h2 {
+                color: darkmagenta;
+                text-align: center;
+                margin 30px;
+            }
+            p {
+                text-align: center;
+                margin 20px;
+            }
+            form {
+                text-align: center;
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                }
+            input[type=submit] {
+                    font-size: larger;
+                    color: black;
+                    background-color: teal;
+                }
+            table,th,td {
+                border:2px solid teal;
+                border-collapse: collapse;
+                }
+        </style>
+    </head>
+    <body>
+            <div class="container">
+                {% block body %}
+                {% endblock %}
+            </div>
+    </body>
+</html>

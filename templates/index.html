@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    User Input
+{% endblock %}
+
+{% block body %}
+    <br><br>
+    <h2>Grant access to Demand & Supply Partners for Edge Reporting UI</h2>
+        <br><br>
+        <form method="POST" action="{{url_for('insert') }}">
+
+            <div class="form-group">
+                <input class="form-control" name="name" placeholder="Name of Advertiser/Publisher" required>
+                <br>
+            </div>
+
+            <div class="form-group">
+            <select class="form-control" name="groupType" required>
+                <option value="">Select Account Type</option>
+                <option value="ofw_demand">ADVERTISER ACCOUNT</option>
+                <option value="ofw_publisher">PUBLISHER ACCOUNT</option>
+            </select>
+            </div>
+                <br>
+
+            <div class="form-group">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        <br><br><br>
+        <img src='static/veranik.jpg' width='10%'>
+
+{% endblock %}
